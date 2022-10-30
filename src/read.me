@@ -1,0 +1,23 @@
+https://github.com/johguse/profanity
+https://github.com/johguse/ERADICATE2
+
+
+
+OpenCL Windows setup: 
+https://stackoverflow.com/questions/56858213/how-to-create-nvidia-opencl-project/57017982#57017982
+https://github.com/ProjectPhysX/OpenCL-Wrapper
+
+Download the OpenCL folder and copy it into your project source folder. 
+Then in your Visual Studio Project, go to "Project Properties -> C/C++ -> General -> Additional Include Directories" 
+and add $(SolutionDir)OpenCL\include (ex. C:\path\to\your\project\src\OpenCL\include)
+Then, in "Project Properties -> Linker -> All Options -> Additional Dependencies" add OpenCL.lib; 
+and in "Project Properties -> Linker -> All Options -> Additional Library Directories" add $(SolutionDir)OpenCL\lib (ex. C:\path\to\your\project\src\OpenCL\lib)
+Finally, in your .cpp source file, include the headers with #include <CL/cl.hpp>.
+
+OpenCL Ubuntu setup: 
+https://github.com/johguse/profanity/issues/48
+
+
+
+How to run properly:
+Build project and copy *.exe file to some directory with *.cl files only
